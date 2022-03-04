@@ -1,0 +1,11 @@
+.grid-container {
+    display: grid;
+    width:fit-content;
+}
+
+.grid-background {
+    width: fit-content;
+}
+.grid-item{
+    background-color: rgb(17, 6, 48);
+}
