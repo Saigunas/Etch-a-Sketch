@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SketchIt!</title>
-    <link rel="stylesheet" href="ResetDefault.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="grid-background">
+    <link rel="stylesheet" href="ResetDefault.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sliderStyle.css" />
+  </head>
+  <body>
+    <div class="board-area">
+      <div class="grid-background">
         <div class="grid-container"></div>
+      </div>
+      <input
+        type="range"
+        min="-1"
+        max="10"
+        value="-1"
+        class="grid-slider"
+        id="grid-slider"
+      />
     </div>
 
-    <script src="gridConfig.js"></script> 
-    <script src="createGrid.js"></script> 
-    <script src="drawingLogic.js"></script> 
-</body>
+    <script src="gridConfig.js"></script>
+    <script src="createGrid.js"></script>
+    <script src="drawingLogic.js"></script>
+  </body>
 </html>
