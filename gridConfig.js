@@ -2,6 +2,7 @@ let gridItems = 20;
 let gridWidth = 300;
 let gridGapWidth = 1;
 let gridBackgroundColor = "rgb(186, 247, 226)";
+let pencilColor = 'grey';
 
 let gridItemWidth = calculateBlockW();
 
