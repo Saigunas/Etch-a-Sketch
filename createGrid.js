@@ -14,3 +14,7 @@ for(let i = 0; i < gridItems * gridItems; i++) {
     
     gridContainer.appendChild(gridItem);
 }
+
+//Doesn't allow client to drag the image, 
+//thus not messing up drawing.
+window.ondragstart = function() { return false; }
