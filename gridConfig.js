@@ -1,6 +1,6 @@
 let gridItems = 20;
-let gridWidth = 300;
-let gridGapWidth = 1;
+let gridWidth = 60;
+let gridGapWidth = 0;
 let gridBordersColor = "rgb(186, 247, 226)";
 let gridItemBackgroundColor = "rgb(242, 242, 242)";
 let pencilColor = "rgb(143, 143, 143)";
@@ -18,7 +18,7 @@ function calculateBlockW() {
   //Devided because block padding starts from center to sides,
   //thus creating double of the width we want
   let blockWidth = gridWidthNoGap / gridItems / 2;
-  return `${blockWidth}px`;
+  return `${blockWidth}vw`;
 }
 
 //Doesn't allow client to drag the image,

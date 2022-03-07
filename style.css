@@ -6,3 +6,25 @@
 .grid-background {
   width: fit-content;
 }
+
+.board-area {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 3.5vw;
+  padding-top: 9vw;
+  padding-bottom: 0;
+  border-radius: 8vw 8vw 2vw 2vw;
+  background-color: rgb(154, 220, 255);
+}
+
+.grid-case {
+  padding: 3.5vw;
+  border-radius: 2vw;
+  background-color: rgb(255, 138, 174);
+}
+
+.grid-slider {
+  margin-top: 3vw;
+  margin-left: 3.5vw;
+}
