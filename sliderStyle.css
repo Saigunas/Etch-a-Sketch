@@ -2,7 +2,7 @@
   -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
   width: 100%; /* Full-width */
-  height: 2vw; /* Specified height */
+  height: 20px; /* Specified height */
   margin-bottom: 0;
   background: #003955;
   outline: none; /* Remove outline */
@@ -17,16 +17,16 @@
 .grid-slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 5vw; /* Set a specific slider handle width */
-  height: 5vw; /* Slider handle height */
+  width: 45px; /* Set a specific slider handle width */
+  height: 45px; /* Slider handle height */
   border: none;
   background: rgb(255, 138, 174);
   cursor: pointer; /* Cursor on hover */
 }
 
 .grid-slider::-moz-range-thumb {
-  width: 5vw; /* Set a specific slider handle width */
-  height: 5vw; /* Slider handle height */
+  width: 45px; /* Set a specific slider handle width */
+  height: 45px; /* Slider handle height */
   background: rgb(255, 138, 174);
   border: none;
   cursor: pointer; /* Cursor on hover */

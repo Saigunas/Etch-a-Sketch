@@ -3,7 +3,7 @@ const gridBackgroundBorder = document.querySelector(".grid-background");
 
 gridBackgroundBorder.style.backgroundColor = gridBordersColor;
 gridContainer.style.gridTemplateColumns = `repeat(${gridItems}, auto)`;
-gridContainer.style.gridGap = `${gridGapWidth}vw`;
+gridContainer.style.gridGap = `${gridGapWidth}px`;
 
 //Create grid items
 for (let i = 0; i < gridItems * gridItems; i++) {
@@ -30,7 +30,7 @@ for (let i = 0; i < gridItems * gridItems; i++) {
 //slider
 const gridSlider = document.querySelector(".grid-slider");
 
-gridSlider.style.width = `${gridWidth}vw`;
+gridSlider.style.width = `${gridWidth}px`;
 gridSlider.max = gridItems;
 
 //When input detected on slider, find the blocks based on sliders value
