@@ -10,21 +10,29 @@
     <link rel="stylesheet" href="sliderStyle.css" />
   </head>
   <body>
-    <div class="board-area">
-      <div class="grid-case">
-        <div class="grid-background">
-          <div class="grid-container"></div>
+    <h1 class="title">Etch-a-Sketch Doodle</h1>
+
+    <div class="play-area">
+      <div class="config-board"></div>
+
+      <div class="board-area">
+        <div class="grid-case">
+          <div class="grid-background">
+            <div class="grid-container"></div>
+          </div>
         </div>
+        <input
+          type="range"
+          min="-1"
+          max="10"
+          value="-1"
+          class="grid-slider"
+          id="grid-slider"
+        />
       </div>
-      <input
-        type="range"
-        min="-1"
-        max="10"
-        value="-1"
-        class="grid-slider"
-        id="grid-slider"
-      />
     </div>
+
+    <p class="credits">Website made by Saigunas</p>
 
     <script src="gridConfig.js"></script>
     <script src="createGrid.js"></script>
