@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+  background-color: #fcfcd4;
+  font-family: 'Itim', cursive;
+}
+
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.play-area {
+  display: flex;
+}
+
+.title {
+  padding: 2vh;
+  font-size: clamp(40px, 7vh, 60px);
+}
+
 .grid-container {
   display: grid;
   width: fit-content;
@@ -7,7 +30,7 @@
   width: fit-content;
 }
 
-.board-area {
+.board-area { 
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -27,4 +50,10 @@
 .grid-slider {
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.credits {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f871;
 }

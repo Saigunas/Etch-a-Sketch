@@ -1,12 +1,13 @@
 let gridItems = 20;
-let gridWidth = 500;
+let minGridItems = 1;
+let maxGridItems = 40;
+let gridWidth = 250;
 let gridGapWidth = 0;
 let gridBordersColor = "rgb(186, 247, 226)";
 let gridItemBackgroundColor = "rgb(242, 242, 242)";
 let pencilColor = "rgb(143, 143, 143)";
 let pencilColorRgb = pencilColor.slice(4, -1);
 let gridItemWidth = calculateBlockW();
-
 function calculateBlockW() {
   /*  
         Calculate block width so wanted grid width is

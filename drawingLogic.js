@@ -1,14 +1,19 @@
 //Select all blocks in the grid and allow drawing
-const gridBlocks = document.querySelectorAll(".grid-item");
+let gridBlocks;
+
+configureDrawing();
+function configureDrawing() {
+  gridBlocks = document.querySelectorAll(".grid-item");
+  gridBlocks.forEach((gridBlock) =>
+    gridBlock.addEventListener("mouseover", changeColor)
+  );
+  gridBlocks.forEach((gridBlock) =>
+    gridBlock.addEventListener("mousedown", changeColor)
+  );
+}
 
 let trigger = false;
 
-gridBlocks.forEach((gridBlock) =>
-  gridBlock.addEventListener("mouseover", changeColor)
-);
-gridBlocks.forEach((gridBlock) =>
-  gridBlock.addEventListener("mousedown", changeColor)
-);
 
 //if mouse is up disable drawing
 window.addEventListener("mouseup", () => (trigger = false));
