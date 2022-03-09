@@ -14,6 +14,9 @@ body {
 
 .play-area {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10vw;
 }
 
 .title {
@@ -66,4 +69,44 @@ label {
       -ms-user-select: none; /* Internet Explorer/Edge */
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome and Opera */
+}
+
+.config-board {
+  display: flex;
+  flex-direction: column;
+  background-color:  #f9f871;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.config {
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+[class="config"]:hover {
+  background-color:  #e4e453;
+}
+
+.config.button {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.config > button {
+  background-color: #003955;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.config > button:hover {
+  cursor: pointer; /* Cursor on hover */
 }
