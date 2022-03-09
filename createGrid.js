@@ -3,6 +3,16 @@ const gridBackgroundBorder = document.querySelector(".grid-background");
 
 gridBackgroundBorder.style.backgroundColor = gridBordersColor;
 
+
+function resetGrid() {
+  gridItemWidth = calculateBlockW();
+  deleteGrid();
+  createGrid();
+  configureDrawing();
+  configureSlider();
+}
+
+
 createGrid();
 //Create grid items
 function createGrid() {
@@ -59,6 +69,9 @@ function configureSlider() {
 //When input detected on slider, find the blocks based on sliders value
 //And halve the opacity for the magnetic board affect
 gridSlider.oninput = function () {
+  if(this.value < 0 || this.value == gridItems) {
+    return;
+  }
   for (let i = 0; i < gridItems; i++) {
     let blockToErase = document.querySelector(
       `.grid-item[data-coordinates="${this.value}, ${i}"]`
@@ -69,12 +82,12 @@ gridSlider.oninput = function () {
     }
 
     let opacityHalf =
-      blockToErase.style.backgroundColor == `rgba(${pencilColorRgb}, 0.5)`;
+      blockToErase.style.backgroundColor == pencilColorErase;
 
     if (opacityHalf) {
       blockToErase.style.backgroundColor = gridItemBackgroundColor;
     } else {
-      blockToErase.style.backgroundColor = `rgba(${pencilColorRgb}, 0.5)`;
+      blockToErase.style.backgroundColor = pencilColorErase;
     }
   }
 };

@@ -13,9 +13,48 @@ pixelNumber.addEventListener('change', (e) =>
         }
         //recreate grid
         gridItems = e.target.value;
-        gridItemWidth = calculateBlockW();
-        deleteGrid();
-        createGrid();
-        configureDrawing();
-        configureSlider();
+        resetGrid();
     });
+
+let gridBorderCheckbox = document.querySelector(".grid-border-checkbox");
+gridBorderCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showGridBorder(true);
+      } else {
+        showGridBorder(false);
+    }
+    resetGrid();
+    });
+
+let penColor = document.querySelector(".pen-color");
+penColor.addEventListener("change", 
+    function(event) {
+        pencilColor = event.target.value;
+  });
+
+
+let penColorRainbow = document.querySelector(".pen-color-rainbow");
+penColorRainbow.addEventListener('change', function() {
+    if (this.checked) {
+        rainbowPen = true;
+      } else {
+        rainbowPen = false;
+        pencilColor = penColor.value;
+    }
+    }); 
+
+let resetSettings = document.querySelector('.reset-settings');
+resetSettings.addEventListener('click', function() {
+    initializeToDefault();
+    initializeUI();
+    resetGrid();
+})
+
+initializeUI();
+
+function initializeUI() {
+    pixelNumber.value = gridItems;
+    gridBorderCheckbox.checked = gridBorderOn;  
+    penColor.value = pencilColor;
+    penColorRainbow.checked = rainbowPen;
+}
